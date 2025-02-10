@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>วางซ้อนวัตถุ</title>
+    <style>
+        .container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            justify-self: center;
+        }
+
+        .black-box, .red-box, .blue-box {
+            position: absolute;
+            width: 150px;
+            height: 200px;
+            transition: transform 0.5s ease, z-index 0.5s;
+        }
+
+        .black-box {
+            background-color: black;
+            top: 50px;
+            left: 150px;
+            z-index: 1;
+        }
+
+        .red-box {
+            background-color: red;
+            width: 150px;
+            height: 250px;
+            top: 30px;
+            left: 80px;
+            z-index: 2;
+            animation-name: blue-box;
+        }
+
+        .blue-box {
+            background-color: blue;
+            top: 50px;
+            left: 0px;
+            z-index: 1;
+        }
+
+         
+        .red-box:hover {
+            
+            z-index: 4;  
+         }
+
+         
+        .black-box:hover {
+            transform: translateX(-70px) translateY(0px);
+            z-index: 4; /* Brings to front */
+
+        }
+
+        /* Animation when hovering over blue box */
+        .blue-box:hover {
+            animation: blue-box 4s ease-in-out;
+        }
+
+        .blue-box:hover ~ .red-box {
+            animation: move-red 1s ease-in-out forwards;
+        }
+        @keyframes blue-box  {
+            0% {
+                transform: translate(10px, 10px);
+               
+            }
+            1% {
+                transform: translate(-12px, 11px);
+            }
+            2% {
+                transform: translate(-14px, 12px);
+            }
+            3% {
+                transform: translate(-16px, 13px);
+            }
+            4% {
+                transform: translate(-18px, 14px);
+            }
+            5% {
+                transform: translate(-20px, 15px);
+            }
+            6% {
+                transform: translate(-22px, 16px);
+            }
+            7% {
+                transform: translate(-24px, 17px);
+            }
+            8% {
+                transform: translate(-26px, 18px);
+            }
+            9% {
+                transform: translate(-28px, 19px);
+            }
+            10% {
+                transform: translate(-30px, 20px);
+            }
+            11% {
+                transform: translate(-32px, 21px);
+            }
+            12% {
+                transform: translate(-34px, 22px);
+            }
+            13% {
+                transform: translate(-36px, 23px);
+            }
+            14% {
+                transform: translate(-38px, 24px);
+            }
+            15% {
+                transform: translate(-40px, 25px);
+            }
+            16% {
+                transform: translate(-40px, 26px);
+            }
+            17% {
+                transform: translate(-42px, 27px);
+            }
+            18% {
+                transform: translate(-44px, 28px);
+            }
+            19% {
+                transform: translate(-46px, 30px);
+            }
+            20% {
+                transform: translate(-48px, 31px);
+            }
+            21% {
+                transform: translate(-50px, 32px);
+            }
+            22% {
+                transform: translate(-52px, 33px);
+            }
+            23% {
+                transform: translate(-54px, 34px);
+            }
+            24% {
+                transform: translate(-56px, 35px);
+            }
+            25% {
+                transform: translate(-58px, 36px);
+            }
+            26% {
+                transform: translate(-60px, 37px);
+            }
+            27% {
+                transform: translate(-62px, 38px);
+            }
+            28% {
+                transform: translate(-64px, 39px);
+            }
+            29% {
+                transform: translate(-66px, 40px);
+            }
+            30% {
+                transform: translate(-68px, 41px);
+            }
+            31% {
+                transform: translate(-70px, 42px);
+            }
+            32% {
+                transform: translate(-68px, 44px);
+            }
+            33% {
+                transform: translate(-66px, 46px);
+            }
+            34% {
+                transform: translate(-64px, 48px);
+            }
+            35% {
+                transform: translate(-62px, 50px);
+            }
+            36% {
+                transform: translate(-60px, 52px);
+            }
+            37% {
+                transform: translate(-58px, 54px);
+            }
+            38% {
+                transform: translate(-56px, 56px);
+            }
+            39% {
+                transform: translate(-54px, 58px);
+            }
+            40% {
+                transform: translate(-52px, 60px);
+            }
+            41% {
+                transform: translate(-50px, 62px);
+            }
+            42% {
+                transform: translate(-48px, 64px);
+            }
+            43% {
+                transform: translate(-46px, 66px);
+            }
+            44% {
+                transform: translate(-44px, 68px);
+            }
+            45% {
+                transform: translate(-42px, 70px);
+            }
+            46% {
+                transform: translate(-40px, 72px);
+                
+            }
+            
+            47% {
+                transform: translate(-38px, 70px);
+            }
+            48% {
+                transform: translate(-36px, 68px);
+            }
+            49% {
+                transform: translate(-34px, 66px);
+            }
+            50% {
+                transform: translate(-32px, 64px);
+            }
+            51% {
+                transform: translate(-30px, 62px);
+            }
+            52% {
+                transform: translate(-28px, 60px);
+            }
+            53% {
+                transform: translate(-26px, 58px);
+            } 
+            80% {
+                transform: translate(80px, 30px);
+            }
+            100% {
+                transform: translate(80px, 0px);
+                z-index: 4;
+                z-index: 4;
+                width: 150px;
+                height: 250px;
+                top: 30px;
+            }
+            
+        }
+        @keyframes move-red {
+            0% {
+                transform: translate(80px, 0px);
+            }
+            50% {
+                transform: translate(50px, 00px);
+            }
+            100% {
+                transform: translate(100px, 0px);
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="black-box"></div>
+        <div class="red-box"></div>
+        <div class="blue-box"></div>
+
+    </div>
+    
+</body >            
+</html>
