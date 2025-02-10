@@ -182,6 +182,42 @@
       font-size: 14px;
   }
 }
+@media (max-width: 1080px) {
+  .card {
+      padding: 10px;
+  }
+
+  .card-content h1 {
+      font-size: 18px;
+  }
+
+  .card-content p {
+      font-size: 14px;
+  }
+
+  .card-content button {
+      padding: 8px 15px;
+      font-size: 14px;
+  }
+}
+@media (max-width: 780px) {
+  .card {
+      padding: 10px;
+  }
+
+  .card-content h1 {
+      font-size: 18px;
+  }
+
+  .card-content p {
+      font-size: 14px;
+  }
+
+  .card-content button {
+      padding: 8px 15px;
+      font-size: 14px;
+  }
+}
 
 
 
