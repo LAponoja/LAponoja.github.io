@@ -165,35 +165,59 @@
   }
 }
 @media (max-width: 480px) {
-  .container {
-      width: 150px;
-      height: 150px;
+  .card {
+      width: 90%;
   }
 
-  .button {
-      width: 90px;
-      height: 35px;
-      font-size: 12px;
-      line-height: 35px;
+  .card-content h1 {
+      font-size: 18px;
   }
 
-  .heart {
-      width: 50px;
-      height: 50px;
-      bottom: -80px; /* ลดระยะสำหรับมือถือ */
+  .card-content p {
+      font-size: 14px;
   }
 
-  @keyframes float-up {
-      0% {
-          bottom: -80px; /* เริ่มจากด้านล่าง */
-          opacity: 0;
-      }
-      50% {
-          opacity: 1;
-      }
-      100% {
-          bottom: 120px; /* ลอยขึ้นไปด้านบนสำหรับมือถือ */
-          opacity: 0;
-      }
+  .card-content button {
+      padding: 8px 15px;
+      font-size: 14px;
   }
 }
+@media (max-width: 750px) {
+  .card {
+      width: 90%;
+  }
+
+  .card-content h1 {
+      font-size: 18px;
+  }
+
+  .card-content p {
+      font-size: 14px;
+  }
+
+  .card-content button {
+      padding: 8px 15px;
+      font-size: 14px;
+  }
+}
+@media (max-width: 1080px) {
+  .card {
+      width: 90%;
+  }
+
+  .card-content h1 {
+      font-size: 18px;
+  }
+
+  .card-content p {
+      font-size: 14px;
+  }
+
+  .card-content button {
+      padding: 8px 15px;
+      font-size: 14px;
+  }
+}
+
+
+ 
