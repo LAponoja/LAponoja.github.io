@@ -164,7 +164,24 @@
       opacity: 0;
   }
 }
+@media (max-width: 1980px) {
+  .card {
+      padding: 10px;
+  }
 
+  .card-content h1 {
+      font-size: 18px;
+  }
+
+  .card-content p {
+      font-size: 14px;
+  }
+
+  .card-content button {
+      padding: 8px 15px;
+      font-size: 14px;
+  }
+}
 
 
 
