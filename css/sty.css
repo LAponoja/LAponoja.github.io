@@ -24,7 +24,8 @@
     transition: 0.3s;
     border-radius: 15px;
     color: #E91E63;
-    margin-top: 10%;
+    margin-top: 15%;
+    z-index: 4; 
   }
   .card2{
     /* Add shadows to create the "card" effect */
@@ -98,9 +99,12 @@
   transition: background-color 0.3s ease-in-out;
   top: 50%; 
   left: 40%;
+  margin-top: 10%;
   background-image: none;
   background-size: cover; 
-  background-position: center
+  background-position: center;
+  text-decoration: none;
+
 }
 
 .button:hover {
@@ -219,6 +223,10 @@
   }
 }
 
+.box__container {
+  width: 100px;
+  height: 100px;  
+}
 
 
  

@@ -12,7 +12,7 @@
             justify-self: center;
         }
 
-        .black-box, .red-box, .blue-box {
+        /*.black-box, .red-box, .blue-box {
             position: absolute;
             width: 150px;
             height: 200px;
@@ -54,10 +54,10 @@
             transform: translateX(-70px) translateY(0px);
             z-index: 4; /* Brings to front */
 
-        }
+        /*}
 
         /* Animation when hovering over blue box */
-        .blue-box:hover {
+        /*.blue-box:hover {
             animation: blue-box 4s ease-in-out;
         }
 
@@ -254,7 +254,97 @@
                 transform: translate(100px, 0px);
             }
         }
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes headShake {
+            0% {
+                transform: translateX(0) ;
+            }
+            1% {
+                transform: translateX(2px) ;
+            }
+            2% {
+                transform: translateX(4px) ;
+            }       
+            3% {
+                transform: translateX(6px) ;
+            }
+            
+          
+        }
+        @keyframes headShakeMove {
+            0% {
+                transform: rotate(0deg) translate(200px,100px);
+            }
+            25% {
+                transform: rotate(15deg) translate(300px,200px);
+            }
+            50% {
+                transform: rotate(-15deg) translate(200px,100px);
+            }
+            75% {
+                transform: rotate(15deg) translate(300px,100px);
+            }
+            100% {
+                transform: rotate(0deg) translate(300px,-200px);
+            }
+
+        }
+        @keyframes boom {
+            0%{
+                transform: scale(1);
+            }
+            50%{
+                transform: scale(2);
+            }
+            
+        }
         
+        .head {
+            width: 100px;
+            height: 100px;
+            background-color: #f1c40f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation:infinite ease-in-out;
+            animation-name: headShakeMove;
+            animation-duration: 4s;
+            position: relative;
+        }
+        .box_red {
+            animation-name: boom;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+        
+        
+        /* กำหนดสไตล์ให้กับ element ที่ต้องการให้อนิเมชั่น */
+        /*.spinner {
+            
+            animation: spin 4s linear infinite; /* ใช้ animation และกำหนดให้ลูปไปเรื่อยๆ */
+        /*}*/
+        .box_blue {
+            height: 200px;
+            width: 200px;
+            background-color: blue;
+            transition-property: transform, background-color, scale;
+            transition-duration: 1s;
+            transition-timing-function: ease;
+            transition-delay: 0s;
+        }
+        
+        .box_blue:hover {
+            
+            background-color: cyan;
+            scale: 2;
+        }
     </style>
 </head>
 <body>
@@ -262,8 +352,11 @@
         <div class="black-box"></div>
         <div class="red-box"></div>
         <div class="blue-box"></div>
-
+        <div class="spinner"><img src="img\windmill.png"></div>
+        
     </div>
+    <div class="head"></div>
     
+    <div class="box_blue"><img src="img/heart.png"></div>
 </body >            
 </html>
