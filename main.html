@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>เว็บสุ่มคำ</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #wordBox {
+      font-size: 2em;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>สุ่มคำ</h1>
+  <div id="wordBox">กำลังโหลดคำ...</div>
+  <button onclick="getRandomWord()">สุ่มคำ</button>
+
+  <script>
+    let wordList = [];
+
+    fetch('word.json')
+      .then(response => response.json())
+      .then(data => {
+        wordList = data.words;
+        document.getElementById("wordBox").textContent = "คลิกปุ่มเพื่อสุ่มคำ";
+      })
+      .catch(error => {
+        console.error("โหลดคำไม่สำเร็จ", error);
+        document.getElementById("wordBox").textContent = "เกิดข้อผิดพลาดในการโหลดคำ";
+      });
+
+    function getRandomWord() {
+      if (wordList.length === 0) return;
+      const index = Math.floor(Math.random() * wordList.length);
+      document.getElementById("wordBox").textContent = wordList[index];
+    }
+  </script>
+
+</body>
+</html>
